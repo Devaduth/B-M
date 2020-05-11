@@ -11,7 +11,8 @@
 
   <!-- Favicons -->
   
-
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css" type="text/css">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -501,6 +502,14 @@
 		<span class="fa fa-angle-up  mb-3" aria-hidden="true"></span>
 	</a>
 </div>
+	  <div class="loader-wrapper">
+	<img class="image-fish" src="assets/img/fish2.gif" alt="">
+</div>
+<script>
+	$(window).on("load",function(){
+	  $(".loader-wrapper").fadeOut("slow");
+	});
+</script>
 
 <!-- move top -->
 
