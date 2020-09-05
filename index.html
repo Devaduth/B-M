@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -55,7 +55,6 @@
         <ul>
           <li class="active"><a href="#header">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#services">fishes</a></li>
           <li><a href="#portfolio">Gallery</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#pricing">Buy Now</a></li>
@@ -406,7 +405,7 @@
           </div>
 
           <div class="col-lg-5 col-md-12" >
-            <form action="https://formspree.io/mzbjadpy" method="POST" r>
+            <form id="submit-form" action="" >
               <div class="form-group">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                 <div class="validate"></div>
@@ -424,10 +423,7 @@
                 <div class="validate"></div>
               </div>
               <div class="mb-3">
-                <div class="text-center"><button  type="submit" >Send Message</button></div> 
-                <div class="loading">Sending message</div>     
-              
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                <button type="submit" id="submit-btn">Send message</button>
               </div>
             </form>
           </div>
@@ -499,6 +495,27 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
+  <script>
+    $("#submit-form").submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+            url:"",
+            data:$("#submit-form").serialize(),
+            method:"post",
+            success:function (response){
+                alert("Form submitted successfully")
+                window.location.reload()
+                //window.location.href="https://google.com"
+            },
+            error:function (err){
+                alert("Something Error")
+
+            }
+        })
+    })
+</script>
 
 </body>
 
